@@ -1,0 +1,6 @@
+<h1>Tree Tracker Users</h1>
+
+<% @users.each do |user| %>
+    <p> <%= link_to user.username, user %></p>
+<% end %>
+<br><br><%= link_to "Main Menu", home_path %>

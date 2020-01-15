@@ -1,7 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Tree.destroy_all
+User.destroy_all
+Favorite.destroy_all
+
+trees = [
+    {common_name: "American sycamore", binomial_name: "platanus occidentalis", category: "deciduous"},
+    {common_name: "Red oak", binomial_name: "quercus rubra", category: "deciduous"},
+    {common_name: "Loblolly pine", binomial_name: "pinus taeda", category: "coniferous"}
+]
+
+users = [
+    {name: "Shannon Nabors", username: "snabes"},
+    {name: "JC Chang", username: "starwarsrules"},
+    {name: "Paul Nicholsen", username: "starwarsisbad"}
+]
+
+users.each do |user|
+    User.create(user)
+end
+
+trees.each do |tree|
+    Tree.create(tree)
+end

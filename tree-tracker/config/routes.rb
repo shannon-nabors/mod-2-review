@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :trees, only: [:index, :show, :new, :create]
+  resources :users, only: [:index, :show, :edit, :update]
+  get "/", to: "users#home", as: "home"
 end

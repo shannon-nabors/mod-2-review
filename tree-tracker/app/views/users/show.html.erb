@@ -1,0 +1,12 @@
+<h1><%= @user.name %></h1>
+
+<p>Username: <%= @user.username %></p>
+<p>Favorite trees:</p>
+<ul>
+    <% @user.trees.each do |tree| %>
+        <li><%= link_to tree.common_name, tree %></li>
+    <% end %>
+</ul>
+<br><br>
+<%= link_to "Update Profile", edit_user_path %><br>
+<%= link_to "Main Menu", home_path %>

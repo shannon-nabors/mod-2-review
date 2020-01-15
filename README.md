@@ -16,5 +16,5 @@ Users of our website should be able to:
 
 - See a list of all the trees/see individual trees.
 - See a list of all the users/see individual users. A user's profile page should list their favorite trees.
-- Create a new favorite. They should be able to add a new tree at the same time, or choose from existing trees.
-- Delete a favorite.
+- Update their profile to change their name, username, or favorite trees.
+- If one of their favorite trees isn't in our database, a user should be able to add a new tree (and add themselves as a favorite at the same time).

@@ -1,0 +1,6 @@
+<h1>All Trees</h1>
+
+<% @all_trees.each do |tree| %>
+    <p> <%= link_to tree.common_name, tree %></p>
+<% end %>
+<br><br><%= link_to "Main Menu", home_path %>
